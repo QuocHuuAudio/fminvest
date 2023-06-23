@@ -20,12 +20,13 @@
    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" href="./assets/css/reset.css">
-   <link rel="stylesheet" href="./assets/css/grid.min.css">
-   <link rel="stylesheet" href="./assets/css/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./assets/css/reset.css">
+   <link rel="stylesheet" href="./assets/css/grid.min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/responsive.css">
    <title>FM Invest - Thông tin về các sàn giao dịch</title>
 </head>
 
@@ -33,11 +34,11 @@
    <header class="header">
       <section class="container header__container">
          <a href="#" class="header-logo">
-            <img class="header-logo__img" src="./assets/img/logos/Logo_FM_Invest_2023/horizontal-white-png-cropped.png"
+            <img class="header-logo__img" src="./assets/img/logos/fminvest-horizontal-white-png-cropped.png"
                alt="FM Invest Logo">
          </a>
          <a href="#" class="header-logo d-none">
-            <img class="header-logo__img" src="./assets/img/logos/Logo_FM_Invest_2023/horizontal-black-png-cropped.png"
+            <img class="header-logo__img" src="./assets/img/logos/fminvest-horizontal-black-png-cropped.png"
                alt="FM Invest Logo">
          </a>
          <nav>
@@ -113,9 +114,13 @@
                   dụng mã
                   giới thiệu của chúng tôi để nhận ngay 20% giảm phí giao dịch.
                </p>
-               <div class="banner__nav">
-                  <a href="#" class="banner__button active">Đăng ký ngay</a>
-                  <a href="#" class="banner__button">Tìm hiểu thêm</a>
+               <div class="banner__nav row g-4 gy-lg-0 gx-xl-0">
+                  <a href="#" class="banner__button col-lg-6">
+                     <span class="banner__button-span active">Đăng ký ngay</span>
+                  </a>
+                  <a href="#" class="banner__button col-lg-6">
+                     <span class="banner__button-span">Tìm hiểu thêm</span>
+                  </a>
                </div>
             </div>
 
@@ -137,7 +142,7 @@
                <br>
                <span class="mgt-16 d-inline-block">Tại đây, chúng ta có những sàn giao dịch tốt nhất!</span>
             </p>
-            <ul class="brokers__list row gx-xl-5">
+            <ul class="brokers__list row gx-md-3 gx-xl-5">
                <li class="col-md-6 col-lg-4">
                   <a href="#" class="brokers__link">
                      <img class="brokers__logo" src="./assets/img/logos/binance_logo.svg" alt="Sàn Binance">
@@ -229,7 +234,7 @@
                trường phức tạp và biến động như Forex và Crypto, sự đáng tin cậy là yếu tố quan trọng. Vì vậy, chúng tôi
                cam kết cung cấp cho bạn một môi trường đầu tư an toàn và tin cậy, nơi bạn có thể tập trung vào việc phát
                triển chiến lược và tối ưu hóa lợi nhuận của mình.</p>
-            <div class="choose-us__content row gy-4 g-md-4 gx-lg-5">
+            <div class="choose-us__list row gy-4 g-md-4 gx-xl-5">
                <!-- <div class="choose-us__item d-none">
                   <i class="section-icon fa-solid fa-ranking-star"></i>
                   <h3 class="section-subtitle">Đội ngũ hỗ trợ trực tuyến chuyên nghiệp</h3>
@@ -289,21 +294,21 @@
                cung cấp cho bạn một nền tảng hoàn hảo để khám phá và tham gia vào thị trường tài chính toàn cầu. Từ
                Forex, tiền điện tử, cổ phiếu cho đến hàng hóa, bạn sẽ tìm thấy một loạt các công cụ và tài sản đầu tư để
                xây dựng danh mục đa dạng và tối ưu hóa lợi nhuận của mình.</p>
-            <div class="introduce__content row gy-4 g-md-4 gx-lg-5">
-               <d col-sm-6iv class="col-lg-4 col-md-6">
+            <div class="introduce__list row gy-4 g-md-4 gx-xl-5">
+               <d col-sm-6iv class="col-md-6 col-lg-4">
                   <div class="introduce__item">
                      <i class="section-icon fa-solid fa-medal"></i>
-                     <h3 class="introduce__title">Đối tác uy tín và chất lượng</h3>
+                     <h3 class="section-subtitle">Đối tác uy tín và chất lượng</h3>
                      <p class="section-sub-description">FM Invest là điểm đến hàng đầu để bạn tìm hiểu về các đối tác
                         là
                         các sàn giao dịch uy tín. Chúng tôi cung cấp thông tin chính xác, tổng quan và chi tiết
                         về các sàn giao dịch hàng đầu, bao gồm tính năng, lợi ích và đánh giá từ người dùng thực.</p>
                   </div>
                </d>
-               <d col-sm-6iv class="col-lg-4 col-md-6">
+               <d col-sm-6iv class="col-md-6 col-lg-4">
                   <div class="introduce__item">
                      <i class="section-icon fa-solid fa-hand-holding-dollar"></i>
-                     <h3 class="introduce__title">Giảm phí giao dịch</h3>
+                     <h3 class="section-subtitle">Giảm phí giao dịch</h3>
                      <p class="section-sub-description">Với FM Invest, bạn có thể tiết kiệm chi phí giao dịch thông qua
                         mã giới thiệu đặc biệt. Bằng cách sử dụng mã giới thiệu của chúng tôi, bạn có thể đăng ký tại
                         các sàn giao dịch và được hưởng mức giảm 20% phí giao dịch. Điều này không chỉ giúp bạn tối ưu
@@ -311,10 +316,10 @@
                      </p>
                   </div>
                </d>
-               <d col-sm-6iv class="col-lg-4 col-md-6">
+               <d col-sm-6iv class="col-md-6 col-lg-4">
                   <div class="introduce__item">
                      <i class="section-icon fa-solid fa-user-graduate"></i>
-                     <h3 class="introduce__title">Hướng dẫn đầu tư thông minh</h3>
+                     <h3 class="section-subtitle">Hướng dẫn đầu tư thông minh</h3>
                      <p class="section-sub-description">Ngoài ra, FM Invest cung cấp cho bạn nguồn kiến thức đáng tin
                         cậy
                         về tài chính và đầu tư. Tại đây, bạn có thể tìm thấy các bài viết, hướng dẫn và tài liệu hữu ích
@@ -329,69 +334,68 @@
 
    </main>
 
-   <footer>
-      <div class="footer">
-         <div class="container">
-            <div class="footer__container row">
-               <section class="footer__section">
-                  <!-- <img class="footer__logo" src="./assets/img/Logo_PNG_Black.png" alt="FM Invest Logo"> -->
-                  <!-- logo -->
-                  <span class="footer__title">FM Invest</span>
-                  <!-- tương lai thay logo có chữ vào và xoá thẻ span -->
-                  <ul class="footer__list">
-                     <li><a href="#" class="footer__link">Trang chủ</a></li>
-                     <li><a href="/top-3-san-giao-dich-forex" class="footer__link">Top 3 sàn giao dịch Forex</a></li>
-                     <li><a href="/top-3-san-giao-dich-crypto" class="footer__link">Top 3 sàn giao dịch Crypto</a></li>
-                  </ul>
-               </section>
-               <section class="footer__section">
-                  <h4 class="footer__title">Kiến thức</h4>
-                  <ul class="footer__list">
-                     <li><a href="/kien-thuc-forex" class="footer__link">Kiến thức Forex</a></li>
-                     <li><a href="/kien-thuc-crypto" class="footer__link">Kiến thức Crypto</a></li>
-                  </ul>
-               </section>
-               <section class="footer__section">
-                  <h4 class="footer__title">Sàn giao dịch Forex</h4>
-                  <ul class="footer__list">
-                     <li><a href="/exness" class="footer__link">Exness</a></li>
-                     <li><a href="/xm" class="footer__link">XM</a></li>
-                     <li><a href="/fbs" class="footer__link">FBS</a></li>
-                  </ul>
-               </section>
-               <section class="footer__section">
-                  <h4 class="footer__title">Sàn giao dịch Crypto</h4>
-                  <ul class="footer__list">
-                     <li><a href="/binance" class="footer__link">Binance</a></li>
-                     <li><a href="/kucoin" class="footer__link">KuCoin</a></li>
-                     <li><a href="/huobi" class="footer__link">Huobi</a></li>
-                  </ul>
-               </section>
-               <section class="footer__section">
-                  <span class="footer__title">Liên hệ</span>
-                  <ul class="footer__list">
-                     <li class="footer__item">
-                        Email:
-                        <a class="footer__link" href="">fminvest@gmail.com</a>
-                     </li>
-                     <li class="footer__item">
-                        Phone:
-                        <a class="footer__link" href="">+84934950123</a>
-                     </li>
-                     <li class="footer__item">
-                        Telegram:
-                        <a class="footer__link" href="">@fminvest</a>
-                     </li>
-                  </ul>
-               </section>
-               <section id="disclaimer" class="footer__section">
-                  <p>Tuyên bố miễn trừ trách nhiệm: Mọi thông tin trên trang web này chỉ mang tính chất tham khảo và
-                     không đại diện cho lời khuyên đầu tư, mua/bán hay bất kỳ hành động tài chính nào. Mọi quyết định
-                     đầu tư hoặc giao dịch đều được thực hiện dựa trên quyền riêng của người dùng, và mọi rủi ro hoặc
-                     mất mát về tài chính liên quan đến việc đó đều nằm ngoài trách nhiệm của chúng tôi. Người sử dụng
-                     phải tự chịu trách nhiệm và nắm rõ rủi ro liên quan đến việc sử dụng và đầu tư vốn của mình.</p>
-               </section>
-            </div>
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__container">
+            <section class="footer__section">
+               <a href="#">
+                  <img class="footer__logo" src="./assets/img/logos/fminvest-horizontal-black-png-cropped.png"
+                     alt="FM Invest Logo">
+               </a>
+
+               <ul class="footer__list">
+                  <li><a href="#" class="footer__link">Trang chủ</a></li>
+                  <li><a href="/top-3-san-giao-dich-forex" class="footer__link">Top 3 sàn giao dịch Forex</a></li>
+                  <li><a href="/top-3-san-giao-dich-crypto" class="footer__link">Top 3 sàn giao dịch Crypto</a></li>
+               </ul>
+            </section>
+            <section class="footer__section">
+               <h4 class="footer__title">Kiến thức</h4>
+               <ul class="footer__list">
+                  <li><a href="/kien-thuc-forex" class="footer__link">Kiến thức Forex</a></li>
+                  <li><a href="/kien-thuc-crypto" class="footer__link">Kiến thức Crypto</a></li>
+               </ul>
+            </section>
+            <section class="footer__section">
+               <h4 class="footer__title">Sàn giao dịch Forex</h4>
+               <ul class="footer__list">
+                  <li><a href="/exness" class="footer__link">Exness</a></li>
+                  <li><a href="/xm" class="footer__link">XM</a></li>
+                  <li><a href="/fbs" class="footer__link">FBS</a></li>
+               </ul>
+            </section>
+            <section class="footer__section">
+               <h4 class="footer__title">Sàn giao dịch Crypto</h4>
+               <ul class="footer__list">
+                  <li><a href="/binance" class="footer__link">Binance</a></li>
+                  <li><a href="/kucoin" class="footer__link">KuCoin</a></li>
+                  <li><a href="/huobi" class="footer__link">Huobi</a></li>
+               </ul>
+            </section>
+            <section class="footer__section">
+               <span class="footer__title">Liên hệ</span>
+               <ul class="footer__list">
+                  <li class="footer__item">
+                     Email:
+                     <a class="footer__link" href="">fminvest@gmail.com</a>
+                  </li>
+                  <li class="footer__item">
+                     Phone:
+                     <a class="footer__link" href="">+84934950123</a>
+                  </li>
+                  <li class="footer__item">
+                     Telegram:
+                     <a class="footer__link" href="">@fminvest</a>
+                  </li>
+               </ul>
+            </section>
+            <section id="disclaimer" class="footer__section">
+               <p>Tuyên bố miễn trừ trách nhiệm: Mọi thông tin trên trang web này chỉ mang tính chất tham khảo và
+                  không đại diện cho lời khuyên đầu tư, mua/bán hay bất kỳ hành động tài chính nào. Mọi quyết định
+                  đầu tư hoặc giao dịch đều được thực hiện dựa trên quyền riêng của người dùng, và mọi rủi ro hoặc
+                  mất mát về tài chính liên quan đến việc đó đều nằm ngoài trách nhiệm của chúng tôi. Người sử dụng
+                  phải tự chịu trách nhiệm và nắm rõ rủi ro liên quan đến việc sử dụng và đầu tư vốn của mình.</p>
+            </section>
          </div>
       </div>
    </footer>
@@ -399,11 +403,8 @@
    <script>
       const header = document.querySelector('.header');
       const headerLogos = Array.from(header.querySelectorAll('.header-logo'));
-      const navDropdown = document.querySelector('.nav__dropdown')
-
-      const headerHeight = getComputedStyle(header).getPropertyValue('--header-height');
-      const heightNumber = parseInt(headerHeight);
-      const dropdownTop = getComputedStyle(navDropdown).getPropertyValue('top')
+      const navDropdown = document.querySelector('.nav__dropdown');
+      const dropdownTop = getComputedStyle(navDropdown).getPropertyValue('top');
 
 
       window.addEventListener('scroll', () => {
@@ -413,8 +414,7 @@
             if (!header.classList.contains('header--fixed')) {
                header.classList.add('header--fixed');
             }
-            header.style.setProperty('--header-height', '80px');
-            navDropdown.style.setProperty('top', '64px');
+            // navDropdown.style.setProperty('top', '64px');
             header.style.boxShadow = "0 1px 12px rgba(0 , 0 , 0, 0.1)";
 
             // Xử lý logo
@@ -425,8 +425,7 @@
             if (header.classList.contains('header--fixed')) {
                header.classList.remove('header--fixed');
             }
-            header.style.setProperty('--header-height', headerHeight);
-            navDropdown.style.setProperty('top', dropdownTop);
+            // navDropdown.style.setProperty('top', dropdownTop);
             header.style.boxShadow = "none";
 
             // Xử lý logo
@@ -434,7 +433,7 @@
                headerLogos.forEach(logo => logo.classList.toggle('d-none'));
             }
          }
-      })
+      });
    </script>
 </body>
 

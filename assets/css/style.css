@@ -17,6 +17,9 @@ html {
 
 * {
    box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
 }
 
 ul {
@@ -94,17 +97,9 @@ p {
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 }
 
-.bg-blue .section-sub-description {
-   color: var(--text-color);
-}
-
 .section-container {
    text-align: center;
    padding: 80px 0 96px;
-}
-
-.section-container.banner {
-   text-align: initial;
 }
 
 .section-title {
@@ -210,19 +205,6 @@ p {
       transform 0.2s ease-out;
 }
 
-/* @keyframes headerFadeIn {
-   from {
-      transform: translateY(-100%);
-   }
-   to {
-      transform: translateY(0);
-   }
-} */
-
-/* .header.header--fixed {
-   animation: headerFadeIn 0.2s ease-out;
-} */
-
 .header:not(.header--fixed) .header-logo__brand,
 .header:not(.header--fixed) .nav__title,
 .header:not(.header--fixed) .nav__icon {
@@ -240,6 +222,7 @@ p {
 
 .header--fixed {
    background-color: #fff;
+   --header-height: 80px;
 }
 
 .header__container {
@@ -260,7 +243,6 @@ p {
 .header-logo__img {
    display: block;
    height: 30px;
-   color: #fff;
 }
 
 .header-logo__brand {
@@ -313,6 +295,11 @@ p {
    border-radius: 4px;
    overflow: hidden;
    display: none;
+   transition: top 0.2s ease-out;
+}
+
+.header--fixed .nav__dropdown {
+   top: 64px;
 }
 
 /* .nav__dropdown::after {
@@ -384,9 +371,12 @@ p {
 /* Banner: begin */
 .banner {
    margin-top: var(--header-height);
-   -webkit-transition: margin 0.2s ease-out;
    background-color: #303030;
-   min-height: 480px;
+}
+
+.banner.section-container {
+   text-align: initial;
+   padding: 64px 0 96px;
 }
 
 .banner .section-title {
@@ -417,34 +407,36 @@ p {
 
 .banner__nav {
    padding-top: 48px;
-   display: flex;
-   gap: 24px;
 }
 
 .banner__button {
-   font-size: 18px;
    text-decoration: none;
+}
+
+.banner__button-span {
+   font-size: 18px;
    color: #fff;
    border: 2px solid #fff;
    border-radius: 4px;
-   padding: 16px 48px;
-   display: inline-block;
-   min-width: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60px;
    -webkit-transition: background-color 0.12s ease-in, color 0.12s ease-in;
    transition: background-color 0.12s ease-in, color 0.12s ease-in;
 }
 
-.banner__button:hover {
+.banner__button-span:hover {
    color: #303030;
    background-color: #fff;
 }
 
-.banner__button.active {
+.banner__button-span.active {
    color: #ffce00;
    border: 2px solid #ffce00;
 }
 
-.banner__button.active:hover {
+.banner__button-span.active:hover {
    color: #303030;
    background-color: #ffce00;
 }
@@ -452,12 +444,13 @@ p {
 .banner__bg-img {
    flex: 1;
    border-radius: 40px;
-   text-align: center;
-   /* background-image: linear-gradient(to right, rgba(48, 48, 48, 0.02), rgba(255, 255, 255, 0.02), rgba(48, 48, 48, 0.02)); */
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .banner__img {
-   width: 80%;
+   width: 100%;
 }
 /* Banner: end */
 
@@ -502,9 +495,9 @@ p {
    border-bottom: 1px solid var(--border-color);
 }
 
-.choose-us__content,
-.introduce__content {
-   margin-top: 80px;
+.choose-us__list,
+.introduce__list {
+   margin-top: 72px;
    display: flex;
    justify-content: center;
    align-items: baseline;
@@ -514,7 +507,7 @@ p {
    min-height: 400px;
    padding: 32px;
    border-radius: 4px;
-   background-color: var(--bg-white-darkder);
+   background-color: #fff;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.32);
 }
 
@@ -548,14 +541,19 @@ p {
 .footer__container {
    display: grid;
    grid-template-columns: repeat(5, 1fr);
-   grid-column-gap: 30px;
+   gap: 64px 32px;
+   align-items: baseline;
+}
+
+.footer__logo {
+   height: 20px;
 }
 
 .footer__title {
    font-size: 16px;
    font-weight: 500;
    word-spacing: -1px;
-   margin: 0 0 48px;
+   margin: 0;
    display: inline-block;
    cursor: default;
 }
@@ -564,6 +562,7 @@ p {
    display: flex;
    flex-direction: column;
    gap: 12px;
+   margin-top: 48px;
 }
 
 .footer__link {
@@ -596,7 +595,6 @@ p {
    font-style: italic;
    color: #a3a3a3;
    word-spacing: -1px;
-   margin-top: 64px;
    text-align: center;
    padding: 0 48px;
 }
