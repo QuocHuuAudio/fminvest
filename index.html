@@ -41,16 +41,71 @@
             <img class="header-logo__img" src="./assets/img/logos/fminvest-horizontal-black-png-cropped.png"
                alt="FM Invest Logo">
          </a>
-         <nav>
+         <i class="d-md-none header__icon fa-solid fa-bars"></i>
+         <nav class="d-none d-md-block">
             <ul class="nav__list">
                <li class="nav__item">
                   <span class="nav__title">Tin tức</span>
                   <i class="nav__icon fa-solid fa-angle-down"></i>
+                  <div class="nav__dropdown">
+                     <div class="nav__box">
+                        <div class="nav__box-title">
+                           <!-- <i class="nav__box-icon fa-solid fa-sack-dollar"></i>
+                           <h3 class="nav__box-name">Forex Brokers</h3> -->
+                           <span style="color: #555; font-weight: 500;">Hệ thống đang nâng cấp...</span>
+                           <br>
+                           <br>
+                           <span style="font-style: italic; color: #777;">Chúng tôi xin lỗi về sự bất tiện này</span>
+                        </div>
+                        <!-- <ul>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">Exness</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">XM</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">FBS</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">So sánh</a>
+                           </li>
+                        </ul> -->
+
+                     </div>
+                  </div>
                </li>
 
                <li class="nav__item">
                   <span class="nav__title">Kiến thức</span>
                   <i class="nav__icon fa-solid fa-angle-down"></i>
+                  <div class="nav__dropdown">
+                     <div class="nav__box">
+                        <div class="nav__box-title">
+                           <!-- <i class="nav__box-icon fa-solid fa-sack-dollar"></i>
+                           <h3 class="nav__box-name">Forex Brokers</h3> -->
+                           <span style="color: #555; font-weight: 500;">Hệ thống đang nâng cấp...</span>
+                           <br>
+                           <br>
+                           <span style="font-style: italic; color: #777;">Chúng tôi xin lỗi về sự bất tiện này</span>
+                        </div>
+                        <!-- <ul>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">Exness</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">XM</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">FBS</a>
+                           </li>
+                           <li class="nav__box-item">
+                              <a class="nav__box-link" href="">So sánh</a>
+                           </li>
+                        </ul> -->
+
+                     </div>
+                  </div>
                </li>
 
                <li class="nav__item">
@@ -400,41 +455,7 @@
       </div>
    </footer>
 
-   <script>
-      const header = document.querySelector('.header');
-      const headerLogos = Array.from(header.querySelectorAll('.header-logo'));
-      const navDropdown = document.querySelector('.nav__dropdown');
-      const dropdownTop = getComputedStyle(navDropdown).getPropertyValue('top');
-
-
-      window.addEventListener('scroll', () => {
-         const isFirstLogoHidden = headerLogos[0].classList.contains('d-none');
-
-         if (window.pageYOffset > 0) {
-            if (!header.classList.contains('header--fixed')) {
-               header.classList.add('header--fixed');
-            }
-            // navDropdown.style.setProperty('top', '64px');
-            header.style.boxShadow = "0 1px 12px rgba(0 , 0 , 0, 0.1)";
-
-            // Xử lý logo
-            if (!isFirstLogoHidden) {
-               headerLogos.forEach(logo => logo.classList.toggle('d-none'));
-            }
-         } else {
-            if (header.classList.contains('header--fixed')) {
-               header.classList.remove('header--fixed');
-            }
-            // navDropdown.style.setProperty('top', dropdownTop);
-            header.style.boxShadow = "none";
-
-            // Xử lý logo
-            if (isFirstLogoHidden) {
-               headerLogos.forEach(logo => logo.classList.toggle('d-none'));
-            }
-         }
-      });
-   </script>
+   <script src="./assets/js/home.js"></script>
 </body>
 
 </html>

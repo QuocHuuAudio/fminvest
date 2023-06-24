@@ -78,14 +78,6 @@
    .banner.section-container {
       padding: 0px 0 64px;
    }
-
-   .nav__dropdown {
-      top: 64px;
-   }
-
-   .header--fixed .nav__dropdown {
-      top: 56px;
-   }
 }
 
 @media (max-height: 600px) {
@@ -96,10 +88,5 @@
 
    .banner.section-container {
       padding: 0px 0 80px;
-   }
-
-   .nav__dropdown,
-   .header--fixed .nav__dropdown {
-      top: 56px;
    }
 }
