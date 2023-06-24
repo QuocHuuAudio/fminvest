@@ -28,22 +28,25 @@ window.addEventListener("scroll", () => {
    }
 });
 
-// Xử lý click và hover vào header cho từng thiết bị
+// Xử lý click, hover, touch vào header trên từng thiết bị
 const navItems = document.querySelectorAll(".nav__item");
 
-// Xử lý hiệu ứng hover trên máy tính
-if (!isMobileDevice()) {
+// Xử lý hover trên máy tính
+if (!isMobileDevice() && !isSafariOnIpad()) {
+   setTimeout(() => {
+      alert("Đây là máy tính");
+   }, 2000);
    for (let navItem of navItems) {
-      const navDropdown = navItem.querySelector(".nav__dropdown");
+      // const navDropdown = navItem.querySelector(".nav__dropdown");
 
       navItem.addEventListener("mouseenter", () => {
          if (!navItem.classList.contains("hovered")) {
             navItem.classList.add("hovered");
          }
 
-         if (navDropdown && !navDropdown.classList.contains("hovered")) {
-            navDropdown.classList.add("hovered");
-         }
+         // if (navDropdown && !navDropdown.classList.contains("hovered")) {
+         //    navDropdown.classList.add("hovered");
+         // }
       });
 
       navItem.addEventListener("mouseleave", () => {
@@ -51,17 +54,21 @@ if (!isMobileDevice()) {
             navItem.classList.remove("hovered");
          }
 
-         if (navDropdown && navDropdown.classList.contains("hovered")) {
-            navDropdown.classList.remove("hovered");
-         }
+         // if (navDropdown && navDropdown.classList.contains("hovered")) {
+         //    navDropdown.classList.remove("hovered");
+         // }
       });
    }
 }
 
-// Xử lý hiệu ứng click trên điện thoại di động
-if (isMobileDevice() || isIpadOS()) {
+// Xử lý click trên điện thoại & Chrome trên iPad
+if (isMobileDevice()) {
+   setTimeout(() => {
+      alert("Đây là điện thoại");
+   }, 2000);
+
    for (let navItem of navItems) {
-      const navDropdown = navItem.querySelector(".nav__dropdown");
+      // const navDropdown = navItem.querySelector(".nav__dropdown");
 
       navItem.addEventListener("click", () => {
          for (let otherNavItem of navItems) {
@@ -75,9 +82,9 @@ if (isMobileDevice() || isIpadOS()) {
 
          navItem.classList.toggle("hovered");
 
-         if (navDropdown) {
-            navDropdown.classList.toggle("hovered");
-         }
+         // if (navDropdown) {
+         //    navDropdown.classList.toggle("hovered");
+         // }
       });
    }
 }
@@ -85,15 +92,42 @@ if (isMobileDevice() || isIpadOS()) {
 // Kiểm tra thiết bị di động
 function isMobileDevice() {
    return /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(
-      navigator.userAgent.toLowerCase()
+      navigator.userAgent
    );
 }
 
-// Kiểm tra iPad
-function isIpadOS() {
-   return (
-      navigator.maxTouchPoints &&
-      navigator.maxTouchPoints > 2 &&
-      /MacIntel/.test(navigator.platform)
-   );
+// Xử lý touch trên iPad Safari
+if (isSafariOnIpad()) {
+   setTimeout(() => {
+      alert("Đây là Safari trên iPad");
+   }, 2000);
+
+   for (let navItem of navItems) {
+      // const navDropdown = navItem.querySelector(".nav__dropdown");
+
+      navItem.addEventListener("touchend", () => {
+         for (let otherNavItem of navItems) {
+            if (
+               otherNavItem !== navItem &&
+               otherNavItem.classList.contains("hovered")
+            ) {
+               otherNavItem.classList.remove("hovered");
+            }
+         }
+
+         navItem.classList.toggle("hovered");
+
+         // if (navDropdown) {
+         //    navDropdown.classList.toggle("hovered");
+         // }
+      });
+   }
+}
+
+// Kiểm tra có phải là Safari trên iPad không
+function isSafariOnIpad() {
+   var isIpad =
+      /Macintosh/.test(navigator.userAgent) && "ontouchend" in document;
+   var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+   return isIpad && isSafari;
 }

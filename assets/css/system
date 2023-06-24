@@ -23,6 +23,8 @@ https://instapage.com/
 }
 
 1. fix bug dropdown
+2. fix bug nav__title vẫn còn border-bottom khi hết hover
+3. xử lý scroll màn hình xong touch nav title không hoạt động nữa trên safari ipad
 
 
 

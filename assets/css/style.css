@@ -255,16 +255,6 @@ p {
    color: #000;
 }
 
-.nav__list {
-   display: flex;
-   gap: 32px;
-}
-
-.nav__item {
-   cursor: pointer;
-   position: relative;
-}
-
 .nav__item.hovered .nav__title {
    color: var(--primary-color);
    border-bottom: 2px solid var(--primary-color);
@@ -283,14 +273,21 @@ p {
    display: flex;
 }
 
-/* .nav__item:not(hover) .nav__dropdown {
-   display: none;
-} */
+.nav__list {
+   display: flex;
+   gap: 32px;
+}
+
+.nav__item {
+   cursor: pointer;
+   position: relative;
+}
 
 .nav__title {
    color: var(--title-color);
    padding: 12px 0;
    font-size: 18px;
+   border-bottom: none;
    user-select: none;
    -webkit-user-select: none;
    -ms-user-select: none;
