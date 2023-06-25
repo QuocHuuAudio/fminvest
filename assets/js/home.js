@@ -1,7 +1,7 @@
+// Xử lý header khi cuộn trang
 const header = document.querySelector(".header");
 const headerLogos = Array.from(header.querySelectorAll(".header-logo"));
 
-// Xử lý header khi cuộn trang
 window.addEventListener("scroll", () => {
    const isFirstLogoHidden = headerLogos[0].classList.contains("d-none");
 
@@ -28,48 +28,29 @@ window.addEventListener("scroll", () => {
    }
 });
 
-// Xử lý click, hover, touch vào header trên từng thiết bị
+// Xử lý click, hover, vào header trên từng thiết bị
 const navItems = document.querySelectorAll(".nav__item");
 
 // Xử lý hover trên máy tính
 if (!isMobileDevice() && !isSafariOnIpad()) {
-   setTimeout(() => {
-      alert("Đây là máy tính");
-   }, 2000);
    for (let navItem of navItems) {
-      // const navDropdown = navItem.querySelector(".nav__dropdown");
-
       navItem.addEventListener("mouseenter", () => {
          if (!navItem.classList.contains("hovered")) {
             navItem.classList.add("hovered");
          }
-
-         // if (navDropdown && !navDropdown.classList.contains("hovered")) {
-         //    navDropdown.classList.add("hovered");
-         // }
       });
 
       navItem.addEventListener("mouseleave", () => {
          if (navItem.classList.contains("hovered")) {
             navItem.classList.remove("hovered");
          }
-
-         // if (navDropdown && navDropdown.classList.contains("hovered")) {
-         //    navDropdown.classList.remove("hovered");
-         // }
       });
    }
 }
 
-// Xử lý click trên điện thoại & Chrome trên iPad
-if (isMobileDevice()) {
-   setTimeout(() => {
-      alert("Đây là điện thoại");
-   }, 2000);
-
+// Xử lý click trên điện thoại & Chrome trên iPad & Safari trên iPad
+if (isMobileDevice() || isSafariOnIpad()) {
    for (let navItem of navItems) {
-      // const navDropdown = navItem.querySelector(".nav__dropdown");
-
       navItem.addEventListener("click", () => {
          for (let otherNavItem of navItems) {
             if (
@@ -79,14 +60,28 @@ if (isMobileDevice()) {
                otherNavItem.classList.remove("hovered");
             }
          }
-
          navItem.classList.toggle("hovered");
-
-         // if (navDropdown) {
-         //    navDropdown.classList.toggle("hovered");
-         // }
       });
+
+      // Loại bỏ sự kiện nổi bọt
+      // khi click vào navDropdown thì navItem sẽ không toggle nữa
+      const navDropdown = navItem.querySelector(".nav__dropdown");
+      navDropdown.onclick = function (e) {
+         e.stopPropagation();
+      };
    }
+
+   // Xử lý sự kiện click trên document để remove class hovered
+   document.addEventListener("click", (event) => {
+      const isNavItem = !!event.target.closest(".nav__item");
+      const isNavDropdown = !!event.target.closest(".nav__dropdown");
+      for (let navItem of navItems) {
+         if (isNavItem || isNavDropdown) return;
+         if (navItem.classList.contains("hovered")) {
+            navItem.classList.remove("hovered");
+         }
+      }
+   });
 }
 
 // Kiểm tra thiết bị di động
@@ -94,34 +89,6 @@ function isMobileDevice() {
    return /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(
       navigator.userAgent
    );
-}
-
-// Xử lý touch trên iPad Safari
-if (isSafariOnIpad()) {
-   setTimeout(() => {
-      alert("Đây là Safari trên iPad");
-   }, 2000);
-
-   for (let navItem of navItems) {
-      // const navDropdown = navItem.querySelector(".nav__dropdown");
-
-      navItem.addEventListener("touchend", () => {
-         for (let otherNavItem of navItems) {
-            if (
-               otherNavItem !== navItem &&
-               otherNavItem.classList.contains("hovered")
-            ) {
-               otherNavItem.classList.remove("hovered");
-            }
-         }
-
-         navItem.classList.toggle("hovered");
-
-         // if (navDropdown) {
-         //    navDropdown.classList.toggle("hovered");
-         // }
-      });
-   }
 }
 
 // Kiểm tra có phải là Safari trên iPad không
