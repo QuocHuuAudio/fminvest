@@ -22,6 +22,9 @@ https://instapage.com/
    sửa row-gap ở màn nhỏ
 }
 
+1. Xử lý click headerBtn
+2. Xem lại media query < tablet pro & low resolution pc
+3. tiếp tục làm navDropdown trên điện thoại
 
 
 

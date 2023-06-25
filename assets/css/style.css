@@ -10,7 +10,6 @@
    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.header:not(.header--fixed) .header-logo__brand,
 .header:not(.header--fixed) .nav__title,
 .header:not(.header--fixed) .nav__icon {
    color: #fff;
@@ -26,9 +25,9 @@
 }
 
 .header--fixed {
+   --header-height: 80px;
    background-color: #fff;
    color: #000;
-   --header-height: 80px;
 }
 
 .header__container {
@@ -51,14 +50,18 @@
    height: 30px;
 }
 
-.header__icon {
+.header__btn {
    font-size: 24px;
    color: #fff;
    -webkit-transition: color 0.22s ease-out;
    transition: color 0.22s ease-out;
+   position: absolute;
+   top: 50%;
+   right: calc(var(--bs-gutter-x) / 2);
+   transform: translateY(-50%);
 }
 
-.header--fixed .header__icon {
+.header--fixed .header__btn {
    color: #000;
 }
 
@@ -88,6 +91,7 @@
 .nav__item {
    cursor: pointer;
    position: relative;
+   padding: 12px 0;
 }
 
 .nav__title {
@@ -112,7 +116,7 @@
 
 .nav__dropdown {
    position: absolute;
-   top: 34px;
+   top: 46px;
    right: 0;
    background-color: #fff;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
@@ -130,7 +134,7 @@
    position: absolute;
    top: -28px;
    right: 12px;
-   background-color: red;
+   /* background-color: red; */
 }
 
 .nav__box {

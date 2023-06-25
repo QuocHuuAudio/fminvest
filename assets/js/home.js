@@ -98,3 +98,13 @@ function isSafariOnIpad() {
    var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
    return isIpad && isSafari;
 }
+
+// Xử lý header button (min-width < 768)
+const headerBtn = document.querySelector(".header__btn");
+const headerNav = document.querySelector(".header__nav");
+
+if (headerBtn && headerNav) {
+   headerBtn.onclick = () => {
+      headerNav.classList.toggle("d-none");
+   };
+}

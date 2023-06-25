@@ -36,6 +36,7 @@
 
    .footer__container {
       grid-template-columns: repeat(4, 1fr);
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
       gap: 56px 12px;
    }
 
@@ -50,10 +51,111 @@
 
 /* tablet mini */
 @media (min-width: 768px) and (max-width: 991px) {
+   .footer__container {
+      grid-template-columns: repeat(3, 1fr);
+      -ms-grid-columns: 1fr 1fr 1fr;
+      gap: 56px 12px;
+   }
+
+   .footer__list {
+      margin-top: 24px;
+   }
+
+   .footer__link {
+      padding: 4px 0;
+   }
 }
 
 /* phone & high resolution phone */
 @media (max-width: 767px) {
+   .header__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 44%;
+      height: 100%;
+      background-color: #fff;
+      padding: 80px 24px 160px;
+   }
+
+   .nav__logo {
+      display: inline-block;
+      height: 24px;
+      position: relative;
+      top: -52px;
+      left: 0;
+   }
+
+   .nav__close-btn {
+      display: inline;
+      font-size: 24px;
+      position: relative;
+      top: -56px;
+      right: -94px;
+   }
+
+   .nav__list {
+      flex-direction: column;
+      gap: unset;
+   }
+
+   .nav__item {
+      padding: 24px 0;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+      z-index: 1;
+   }
+
+   .nav__icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(270deg);
+      -webkit-transform: translateY(-50%) rotate(270deg);
+      -moz-transform: translateY(-50%) rotate(270deg);
+      -ms-transform: translateY(-50%) rotate(270deg);
+      -o-transform: translateY(-50%) rotate(270deg);
+   }
+
+   .nav__item.hovered .nav__icon {
+      color: var(--primary-color);
+      -webkit-transform: translateY(-50%) rotate(360deg);
+      -moz-transform: translateY(-50%) rotate(360deg);
+      -ms-transform: translateY(-50%) rotate(360deg);
+      -o-transform: translateY(-50%) rotate(360deg);
+      transform: translateY(-50%) rotate(360deg);
+   }
+
+   .header:not(.header--fixed) .nav__title,
+   .header:not(.header--fixed) .nav__icon {
+      color: var(--title-color);
+   }
+
+   .footer {
+      padding: 64px 0 32px;
+   }
+
+   .footer__section {
+      padding-left: 12px;
+   }
+
+   .footer__section:last-child {
+      padding-left: 0;
+   }
+
+   .footer__container {
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-columns: 1fr 1fr;
+      gap: 48px 24px;
+   }
+
+   .footer__list {
+      margin-top: 16px;
+   }
+
+   .footer__link {
+      padding: 2px 0;
+   }
 }
 
 /* < tablet pro & low resolution pc */
