@@ -99,12 +99,26 @@ function isSafariOnIpad() {
    return isIpad && isSafari;
 }
 
-// Xử lý header button (min-width < 768)
+// Xử lý header button (max-width: 767px)
 const headerBtn = document.querySelector(".header__btn");
 const headerNav = document.querySelector(".header__nav");
+const navCloseBtn = document.querySelector(".nav__close-btn");
 
 if (headerBtn && headerNav) {
    headerBtn.onclick = () => {
-      headerNav.classList.toggle("d-none");
+      if (headerNav.classList.contains("d-none")) {
+         headerNav.classList.remove("d-none");
+         document.body.style.overflow = "hidden";
+      }
+   };
+
+   navCloseBtn.onclick = () => {
+      headerNav.classList.add("slide-out");
+      document.body.style.overflow = "visible";
+
+      setTimeout(() => {
+         headerNav.classList.add("d-none");
+         headerNav.classList.remove("slide-out");
+      }, 220);
    };
 }
