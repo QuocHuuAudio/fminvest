@@ -191,7 +191,8 @@
 
 .banner.section-container {
    text-align: initial;
-   padding: 64px 0 96px;
+   padding-top: 64px;
+   padding-bottom: 96px;
 }
 
 .banner .section-title {
@@ -206,7 +207,6 @@
 .banner .section-description {
    color: #fff;
    font-size: 18px;
-   font-weight: 300;
    line-height: 1.6;
    margin-top: 48px;
 }
@@ -258,7 +258,6 @@
 
 .banner__bg-img {
    flex: 1;
-   border-radius: 40px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -346,7 +345,8 @@
 .footer {
    text-align: initial;
    border-bottom: none;
-   padding: 80px 0 64px;
+   padding-top: 80px;
+   padding-bottom: 64px;
    background-color: #f3f1ee;
 }
 
@@ -381,7 +381,6 @@
 
 .footer__link {
    font-size: 16px;
-   font-weight: 300;
    color: var(--text-color-lighter);
    text-decoration: none;
    word-spacing: -1px;
@@ -391,7 +390,6 @@
 
 .footer__item {
    font-size: 16px;
-   font-weight: 300;
    color: var(--text-color-lighter);
    word-spacing: -1px;
    cursor: default;

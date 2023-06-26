@@ -49,7 +49,7 @@
    }
 }
 
-/* tablet mini */
+/* small tablet */
 @media (min-width: 768px) and (max-width: 991px) {
    .footer__container {
       grid-template-columns: repeat(3, 1fr);
@@ -66,8 +66,31 @@
    }
 }
 
-/* phone & high resolution phone */
+/* phone */
+@media (max-width: 575px) {
+   .header,
+   .banner,
+   .brokers,
+   .choose-us,
+   .introduce,
+   .footer {
+      padding-left: 24px;
+      padding-right: 24px;
+   }
+}
+
+/* phone & small tablet */
 @media (max-width: 767px) {
+   .header,
+   .banner,
+   .brokers,
+   .choose-us,
+   .introduce,
+   .footer {
+      padding-left: 32px;
+      padding-right: 32px;
+   }
+
    .header__nav {
       position: fixed;
       top: 0;
@@ -208,11 +231,8 @@
    }
 
    .footer {
-      padding: 64px 0 32px;
-   }
-
-   .footer__section {
-      padding-left: 12px;
+      padding-top: 64px;
+      padding-bottom: 32px;
    }
 
    .footer__section:last-child {
@@ -234,7 +254,7 @@
    }
 }
 
-/* < tablet pro & low resolution pc */
+/* phone & all tablet & low resolution pc */
 @media (max-width: 991px) {
    :root {
       --header-height: 80px;
@@ -248,23 +268,30 @@
       height: 24px;
    }
 
-   .section-container {
-      text-align: center;
-      padding: 48px 0 64px;
+   .banner.section-container {
+      padding-top: 32px;
+      padding-bottom: 64px;
    }
 
-   .banner.section-container {
-      padding: 0px 0 64px;
+   .banner .section-title {
+      font-size: 44px;
+      line-height: 1.2;
+   }
+
+   .banner .section-description {
+      line-height: 1.56;
    }
 }
 
-@media (max-height: 600px) {
+/* custom header & banner */
+@media (max-height: 600px) and (max-width: 500px) {
    :root,
    .header--fixed {
       --header-height: 64px;
    }
 
    .banner.section-container {
-      padding: 0px 0 80px;
+      padding-top: 0;
+      padding-bottom: 80px;
    }
 }
