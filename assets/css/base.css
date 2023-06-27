@@ -97,8 +97,24 @@ p {
    margin: 0;
 }
 
+.mgt-8 {
+   margin-top: 8px !important;
+}
+
 .mgt-16 {
    margin-top: 16px !important;
+}
+
+@media (min-width: 576px) {
+   .mgt-sm-12 {
+      margin-top: 12px !important;
+   }
+}
+
+@media (min-width: 768px) {
+   .mgt-md-16 {
+      margin-top: 16px !important;
+   }
 }
 
 .auto-wrap {
@@ -154,7 +170,8 @@ p {
    font-size: 44px;
    word-spacing: -3px;
    letter-spacing: -0.5px;
-   margin: 32px 0 0;
+   margin-top: 32px;
+   margin-bottom: 0;
 }
 
 .section-title-desc {
@@ -162,7 +179,8 @@ p {
    font-size: 18px;
    word-spacing: 0.5px;
    letter-spacing: 0.2px;
-   margin: 32px 0 0;
+   margin: 0;
+   margin-top: 32px;
 }
 
 .section-description {
@@ -239,9 +257,82 @@ p {
    margin-right: 4px;
 }
 
+/* 
+Breakpoints:
+1. high resolution pc: (min-width: 1200px)
+2. tablet pro & low resolution pc: (min-width: 992px) and (max-width: 1199px)
+3. tablet: (min-width: 768px) and (max-width: 991px)
+4. tablet mini: (min-width: 576px) and (max-width: 767px)
+5. phone: (min-width: 390px) and (max-width: 575px)
+6. low resolution phone: (max-width: 389px)
+*/
+
+/* all phones & tablet mini & talet */
 @media (max-width: 991px) {
+   .section-title-desc {
+      word-spacing: initial;
+      letter-spacing: initial;
+   }
+
+   .auto-wrap {
+      width: 100%;
+   }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
    .section-container {
       padding-top: 48px;
       padding-bottom: 48px;
+   }
+}
+
+/* tablet mini */
+@media (min-width: 576px) and (max-width: 767px) {
+   .section-container {
+      padding-top: 32px;
+      padding-bottom: 48px;
+   }
+
+   .section-title {
+      font-size: 42px;
+   }
+
+   .section-title-desc {
+      margin-top: 24px;
+   }
+}
+
+/* phone */
+@media (min-width: 390px) and (max-width: 575px) {
+   .section-container {
+      padding-top: 24px;
+      padding-bottom: 48px;
+   }
+
+   .section-title {
+      font-size: 38px;
+   }
+
+   .section-title-desc {
+      margin-top: 24px;
+   }
+}
+
+/* low resolution phone */
+@media (max-width: 389px) {
+   .section-container {
+      padding-top: 12px;
+      padding-bottom: 32px;
+   }
+
+   .section-title {
+      margin-top: 24px;
+      font-size: 34px;
+   }
+
+   .section-title-desc {
+      margin-top: 16px;
+      line-height: 1.42;
    }
 }

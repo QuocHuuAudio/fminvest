@@ -122,3 +122,6 @@ if (headerBtn && headerNav) {
       }, 220);
    };
 }
+
+alert(`width: ${window.innerWidth}
+height: ${window.innerHeight}`);

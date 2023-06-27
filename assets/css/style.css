@@ -269,10 +269,6 @@
 /* Banner: end */
 
 /* Brokers: begin */
-.brokers {
-   border-bottom: 1px solid var(--border-color);
-}
-
 .brokers__list {
    margin-top: 64px;
    display: flex;
@@ -305,10 +301,6 @@
 /* Brokers: end */
 
 /* Choose-us: begin */
-.choose-us {
-   border-bottom: 1px solid var(--border-color);
-}
-
 .choose-us__list,
 .introduce__list {
    margin-top: 72px;
