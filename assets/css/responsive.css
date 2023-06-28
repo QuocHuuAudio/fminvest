@@ -61,12 +61,6 @@ Breakpoints:
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-   .footer__container {
-      grid-template-columns: repeat(3, 1fr);
-      -ms-grid-columns: 1fr 1fr 1fr;
-      gap: 56px 12px;
-   }
-
    .banner.section-container {
       padding-top: 32px;
       padding-bottom: 64px;
@@ -79,6 +73,52 @@ Breakpoints:
 
    .banner .section-description {
       line-height: 1.56;
+   }
+
+   .brokers .section-subtitle {
+      margin: 16px 0 12px;
+   }
+
+   .brokers__list {
+      row-gap: 80px;
+   }
+
+   .brokers__item {
+      min-height: 240px;
+      padding: 32px;
+      border-radius: 2px 2px 4px 4px;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14),
+         0 0px 1px rgba(9, 30, 66, 0.08);
+      position: relative;
+   }
+
+   .brokers__link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 12px;
+      margin-left: 4px;
+      height: 48px;
+      background-color: #fff;
+      border-radius: 4px;
+      position: absolute;
+      top: -24px;
+      left: 16px;
+   }
+
+   .brokers__logo {
+      height: 36px;
+   }
+
+   .brokers__logo.fbs {
+      height: 72px;
+   }
+
+   .footer__container {
+      grid-template-columns: repeat(3, 1fr);
+      -ms-grid-columns: 1fr 1fr 1fr;
+      gap: 56px 12px;
    }
 
    .footer__list {
@@ -367,6 +407,15 @@ Breakpoints:
 
    .header-logo__img {
       height: 24px;
+   }
+
+   .brokers__list {
+      text-align: initial;
+   }
+
+   .brokers__content {
+      padding: 0;
+      min-height: unset;
    }
 }
 

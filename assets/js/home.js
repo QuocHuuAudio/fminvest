@@ -10,6 +10,7 @@ window.addEventListener("scroll", () => {
          header.classList.add("header--fixed");
       }
       header.style.boxShadow = "0 1px 12px rgba(0 , 0 , 0, 0.1)";
+      header.style.boxShadow = "0 8px 16px rgba(9 , 30 , 66, 0.14)";
 
       // Xử lý logo
       if (!isFirstLogoHidden) {
@@ -123,5 +124,47 @@ if (headerBtn && headerNav) {
    };
 }
 
-alert(`width: ${window.innerWidth}
-height: ${window.innerHeight}`);
+// Hàm lấy parentElement với selector cụ thể
+function getParent(element, selector) {
+   do {
+      if (element.parentElement && element.parentElement.matches(selector)) {
+         return element.parentElement;
+      }
+      element = element.parentElement;
+   } while (element.parentElement !== null);
+
+   return null; // Trả về null nếu không tìm thấy phần tử cha khớp với selector
+}
+
+// Xử lý thêm màu nền cho từng broker item
+(function () {
+   const brokerColors = {
+      binance: "#F3BA2F",
+      kucoin: "#25AF91",
+      huobi: "#2CA6E0",
+      exness: "#FFCF03",
+      xm: "#DA0001",
+      fbs: "#00BE40",
+   };
+   const brokerItems = Array.from(document.querySelectorAll(".brokers__item"));
+
+   function updateBrokerItemStyles() {
+      brokerItems.forEach((item) => {
+         const windowWidth = window.innerWidth;
+         const brokerName = item.className.split(" ").pop();
+         const brokerColor = brokerColors[brokerName];
+
+         if (brokerColor && windowWidth <= 991) {
+            item.style.borderTop = `2px solid ${brokerColor}`;
+         } else {
+            item.style.borderTop = "none";
+         }
+      });
+   }
+
+   // Gọi hàm cập nhật styles khi trang web được tải
+   updateBrokerItemStyles();
+
+   // Gọi hàm cập nhật styles khi sự kiện resize xảy ra
+   window.addEventListener("resize", updateBrokerItemStyles);
+})();

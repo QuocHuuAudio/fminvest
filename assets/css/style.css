@@ -119,7 +119,7 @@
    top: 46px;
    right: 0;
    background-color: #fff;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
    border-radius: 4px;
    overflow: hidden;
    display: none;
@@ -283,14 +283,12 @@
 }
 
 .brokers__logo {
-   width: 180px;
+   max-width: 180px;
    height: 50px;
-   max-width: 100%;
 }
 
 .brokers__logo.fbs {
    height: 90px;
-   /* margin-left: -45px; */
 }
 
 .brokers__content {
@@ -298,6 +296,30 @@
    min-height: 72px;
    padding: 0 48px;
 }
+
+/* Sử dụng cho max-width: 991px, xem xét đưa vào main */
+/* .brokers__item {
+   min-height: 240px;
+   padding: 32px;
+   border-radius: 2px 2px 4px 4px;
+   background-color: #fff;
+   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
+   position: relative;
+}
+.brokers__link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 12px;
+   margin-left: 4px;
+   height: 48px;
+   background-color: #fff;
+   border-radius: 4px;
+   position: absolute;
+   top: -24px;
+   left: 50%;
+   transform: translateX(-50%);
+} */
 /* Brokers: end */
 
 /* Choose-us: begin */
@@ -314,7 +336,7 @@
    padding: 32px;
    border-radius: 4px;
    background-color: #fff;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.32);
+   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
 }
 
 .choose-us__description {
@@ -325,11 +347,11 @@
 
 /* Introduce: begin */
 .introduce__item {
-   min-height: 430px;
+   min-height: 320px;
    padding: 32px;
    border-radius: 4px;
    background-color: #fff;
-   box-shadow: 0 4px 3px 0 rgba(34, 90, 182, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.3);
+   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
 }
 /* Introduce: end */
 

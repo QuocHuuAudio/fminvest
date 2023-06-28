@@ -248,6 +248,7 @@ p {
    text-decoration: none;
    transition: color 0.16s ease-out;
    -webkit-transition: color 0.16s ease-out;
+   margin-top: 16px;
 }
 
 .section-link:hover {
@@ -273,6 +274,10 @@ Breakpoints:
    .section-title-desc {
       word-spacing: initial;
       letter-spacing: initial;
+   }
+
+   .section-link {
+      margin-top: 32px;
    }
 
    .auto-wrap {
