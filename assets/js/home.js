@@ -9,8 +9,7 @@ window.addEventListener("scroll", () => {
       if (!header.classList.contains("header--fixed")) {
          header.classList.add("header--fixed");
       }
-      header.style.boxShadow = "0 1px 12px rgba(0 , 0 , 0, 0.1)";
-      header.style.boxShadow = "0 8px 16px rgba(9 , 30 , 66, 0.14)";
+      header.style.boxShadow = "0 8px 16px rgba(9 , 30 , 66, 0.12)";
 
       // Xử lý logo
       if (!isFirstLogoHidden) {
@@ -148,23 +147,13 @@ function getParent(element, selector) {
    };
    const brokerItems = Array.from(document.querySelectorAll(".brokers__item"));
 
-   function updateBrokerItemStyles() {
-      brokerItems.forEach((item) => {
-         const windowWidth = window.innerWidth;
-         const brokerName = item.className.split(" ").pop();
-         const brokerColor = brokerColors[brokerName];
+   brokerItems.forEach((item) => {
+      const windowWidth = window.innerWidth;
+      const brokerName = item.className.split(" ").pop();
+      const brokerColor = brokerColors[brokerName];
 
-         if (brokerColor && windowWidth <= 991) {
-            item.style.borderTop = `2px solid ${brokerColor}`;
-         } else {
-            item.style.borderTop = "none";
-         }
-      });
-   }
-
-   // Gọi hàm cập nhật styles khi trang web được tải
-   updateBrokerItemStyles();
-
-   // Gọi hàm cập nhật styles khi sự kiện resize xảy ra
-   window.addEventListener("resize", updateBrokerItemStyles);
+      if (brokerColor) {
+         item.style.borderTop = `2px solid ${brokerColor}`;
+      }
+   });
 })();

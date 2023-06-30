@@ -120,7 +120,7 @@ p {
 
 .auto-wrap {
    display: block;
-   width: 85%;
+   width: 90%;
    margin-left: auto !important;
    margin-right: auto !important;
 }
@@ -182,6 +182,7 @@ p {
    letter-spacing: 0.2px;
    margin: 0;
    margin-top: 32px;
+   padding: 0 16px;
 }
 
 .section-description {
@@ -248,7 +249,7 @@ p {
    text-decoration: none;
    transition: color 0.16s ease-out;
    -webkit-transition: color 0.16s ease-out;
-   margin-top: 16px;
+   margin-top: 24px;
 }
 
 .section-link:hover {
@@ -269,11 +270,23 @@ Breakpoints:
 6. low resolution phone: (max-width: 389px)
 */
 
+@media (max-width: 1199px) {
+   .section-title {
+      margin-top: 24px;
+   }
+}
+
 /* all phones & tablet mini & talet */
 @media (max-width: 991px) {
+   .section-container {
+      padding-top: 48px;
+      padding-bottom: 64px;
+   }
+
    .section-title-desc {
       word-spacing: initial;
       letter-spacing: initial;
+      padding: 0 8px;
    }
 
    .section-link {
@@ -285,16 +298,8 @@ Breakpoints:
    }
 }
 
-/* tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-   .section-container {
-      padding-top: 48px;
-      padding-bottom: 48px;
-   }
-}
-
 /* tablet mini */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 767px) {
    .section-container {
       padding-top: 32px;
       padding-bottom: 48px;
@@ -310,7 +315,7 @@ Breakpoints:
 }
 
 /* phone */
-@media (min-width: 390px) and (max-width: 575px) {
+@media (max-width: 575px) {
    .section-container {
       padding-top: 24px;
       padding-bottom: 48px;
@@ -318,10 +323,6 @@ Breakpoints:
 
    .section-title {
       font-size: 38px;
-   }
-
-   .section-title-desc {
-      margin-top: 24px;
    }
 }
 
@@ -333,7 +334,6 @@ Breakpoints:
    }
 
    .section-title {
-      margin-top: 24px;
       font-size: 34px;
    }
 

@@ -8,6 +8,7 @@ Breakpoints:
 6. low resolution phone: (max-width: 389px)
 */
 
+/* 1. BASE */
 /* high resolution pc */
 @media (min-width: 1200px) {
    .banner__img {
@@ -19,14 +20,24 @@ Breakpoints:
    }
 }
 
-/* tablet pro & low resolution pc */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* phone & all tablets & low resolution pc */
+@media (max-width: 1199px) {
    .brokers__list {
-      row-gap: 80px;
+      text-align: initial;
+   }
+
+   .brokers__item {
+      padding: 32px 24px 32px 32px;
+   }
+
+   .brokers__link {
+      left: 20px;
+      transform: unset;
    }
 
    .brokers__content {
-      padding: 0 32px;
+      padding: 0;
+      min-height: 96px;
    }
 
    .choose-us__list,
@@ -59,8 +70,20 @@ Breakpoints:
    }
 }
 
-/* tablet */
-@media (min-width: 768px) and (max-width: 991px) {
+/* phone & tablet mini & tablet */
+@media (max-width: 991px) {
+   :root {
+      --header-height: 80px;
+   }
+
+   .header--fixed {
+      --header-height: 64px;
+   }
+
+   .header-logo__img {
+      height: 24px;
+   }
+
    .banner.section-container {
       padding-top: 32px;
       padding-bottom: 64px;
@@ -75,63 +98,35 @@ Breakpoints:
       line-height: 1.56;
    }
 
-   .brokers .section-subtitle {
-      margin: 16px 0 12px;
-   }
-
    .brokers__list {
       row-gap: 80px;
-   }
-
-   .brokers__item {
-      min-height: 240px;
-      padding: 32px;
-      border-radius: 2px 2px 4px 4px;
-      background-color: #fff;
-      box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14),
-         0 0px 1px rgba(9, 30, 66, 0.08);
-      position: relative;
-   }
-
-   .brokers__link {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 0 12px;
-      margin-left: 4px;
-      height: 48px;
-      background-color: #fff;
-      border-radius: 4px;
-      position: absolute;
-      top: -24px;
-      left: 16px;
    }
 
    .brokers__logo {
       height: 36px;
    }
 
-   .brokers__logo.fbs {
+   .brokers__item.huobi .brokers__logo {
+      transform: translateY(-4px);
+   }
+
+   .brokers__item.fbs .brokers__logo {
       height: 72px;
+      transform: translateY(-6px);
+   }
+
+   .brokers__content {
+      min-height: 70px;
    }
 
    .footer__container {
       grid-template-columns: repeat(3, 1fr);
       -ms-grid-columns: 1fr 1fr 1fr;
-      gap: 56px 12px;
-   }
-
-   .footer__list {
-      margin-top: 24px;
-   }
-
-   .footer__link {
-      padding: 4px 0;
    }
 }
 
-/* tablet mini */
-@media (min-width: 576px) and (max-width: 767px) {
+/* phone & tablet mini */
+@media (max-width: 767px) {
    .header,
    .banner,
    .brokers,
@@ -142,92 +137,6 @@ Breakpoints:
       padding-right: 24px;
    }
 
-   .banner.section-container {
-      padding-top: 24px;
-      padding-bottom: 48px;
-   }
-
-   .banner .section-title {
-      font-size: 44px;
-      line-height: 1.18;
-   }
-
-   .banner .section-description {
-      line-height: 1.54;
-   }
-
-   .banner__img {
-      width: 80%;
-   }
-}
-
-/* phone */
-@media (min-width: 390px) and (max-width: 575px) {
-   .header,
-   .banner,
-   .brokers,
-   .choose-us,
-   .introduce,
-   .footer {
-      padding-left: 16px;
-      padding-right: 16px;
-   }
-
-   .banner.section-container {
-      padding-top: 16px;
-      padding-bottom: 32px;
-   }
-
-   .banner .section-title {
-      font-size: 40px;
-      line-height: 1.16;
-   }
-
-   .banner .section-description {
-      line-height: 1.52;
-   }
-
-   .banner__img {
-      width: 75%;
-   }
-
-   .banner__nav {
-      padding-top: 32px;
-   }
-}
-
-/* low resolution phone */
-@media (max-width: 389px) {
-   .header,
-   .banner,
-   .brokers,
-   .choose-us,
-   .introduce,
-   .footer {
-      padding-left: 8px;
-      padding-right: 8px;
-   }
-
-   .banner .section-title {
-      font-size: 36px;
-      line-height: 1.16;
-   }
-
-   .banner .section-description {
-      line-height: 1.48;
-   }
-
-   .banner__img {
-      width: 70%;
-   }
-
-   .banner__nav {
-      padding-top: 24px;
-   }
-}
-
-/* phone & tablet mini */
-@media (max-width: 767px) {
    .header__nav {
       position: fixed;
       top: 0;
@@ -367,8 +276,47 @@ Breakpoints:
       font-size: 16px;
    }
 
+   .banner.section-container {
+      padding-top: 24px;
+      padding-bottom: 48px;
+   }
+
+   .banner .section-title {
+      line-height: 1.18;
+   }
+
+   .banner .section-description {
+      line-height: 1.54;
+   }
+
+   .banner__img {
+      width: 80%;
+   }
+
    .banner__bg-img {
       margin-top: 32px;
+   }
+
+   .brokers__list {
+      margin-top: 64px;
+      row-gap: 72px;
+   }
+
+   .brokers .section-subtitle {
+      margin: 16px 0 16px;
+   }
+
+   .brokers__item {
+      padding: 32px 64px 32px 48px;
+      min-height: unset;
+   }
+
+   .brokers__link {
+      left: 36px;
+   }
+
+   .brokers__content {
+      min-height: 56px;
    }
 
    .footer {
@@ -395,39 +343,104 @@ Breakpoints:
    }
 }
 
-/* phone & all tablets */
-@media (max-width: 991px) {
-   :root {
-      --header-height: 80px;
+@media (max-width: 575px) {
+   .header,
+   .banner,
+   .brokers,
+   .choose-us,
+   .introduce,
+   .footer {
+      padding-left: 16px;
+      padding-right: 16px;
    }
 
-   .header--fixed {
-      --header-height: 64px;
+   .banner.section-container {
+      padding-top: 16px;
+      padding-bottom: 32px;
    }
 
-   .header-logo__img {
-      height: 24px;
+   .banner .section-title {
+      font-size: 40px;
+      line-height: 1.16;
    }
 
-   .brokers__list {
-      text-align: initial;
+   .banner .section-description {
+      line-height: 1.52;
    }
 
-   .brokers__content {
-      padding: 0;
-      min-height: unset;
+   .banner__img {
+      width: 75%;
+   }
+
+   .banner__nav {
+      padding-top: 32px;
+   }
+
+   .brokers .section-subtitle {
+      margin: 24px 0 16px;
+   }
+
+   .brokers__item {
+      padding: 32px 48px;
+   }
+}
+
+/* low resolution phone */
+@media (max-width: 389px) {
+   .header,
+   .banner,
+   .brokers,
+   .choose-us,
+   .introduce,
+   .footer {
+      padding-left: 8px;
+      padding-right: 8px;
+   }
+
+   .banner .section-title {
+      font-size: 36px;
+      line-height: 1.16;
+   }
+
+   .banner .section-description {
+      line-height: 1.48;
+   }
+
+   .banner__img {
+      width: 70%;
+   }
+
+   .banner__nav {
+      padding-top: 24px;
    }
 }
 
 /* custom header & banner */
-@media (max-height: 600px), (max-width: 500px) {
+@media (max-height: 600px), (max-width: 389px) {
    :root,
    .header--fixed {
-      --header-height: 64px;
+      --header-height: 64px !important;
    }
 
    .banner.section-container {
-      padding-top: 4px;
-      padding-bottom: 32px;
+      padding-top: 4px !important;
+      padding-bottom: 32px !important;
    }
+}
+
+/* 2. CUSTOM */
+/* tablet pro & low resolution pc */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* tablet mini */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/* phone */
+@media (min-width: 390px) and (max-width: 575px) {
 }

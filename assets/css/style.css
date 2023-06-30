@@ -119,7 +119,7 @@
    top: 46px;
    right: 0;
    background-color: #fff;
-   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
+   box-shadow: 0 4px 8px rgba(9, 30, 66, 0.1);
    border-radius: 4px;
    overflow: hidden;
    display: none;
@@ -270,48 +270,29 @@
 
 /* Brokers: begin */
 .brokers__list {
-   margin-top: 64px;
+   margin-top: 80px;
    display: flex;
    justify-content: center;
    align-items: baseline;
    row-gap: 96px;
 }
 
-.brokers__link {
-   color: var(--text-color);
-   text-decoration: none;
-}
-
-.brokers__logo {
-   max-width: 180px;
-   height: 50px;
-}
-
-.brokers__logo.fbs {
-   height: 90px;
-}
-
-.brokers__content {
-   color: var(--text-color-lighter);
-   min-height: 72px;
-   padding: 0 48px;
-}
-
-/* Sử dụng cho max-width: 991px, xem xét đưa vào main */
-/* .brokers__item {
+.brokers__item {
    min-height: 240px;
    padding: 32px;
    border-radius: 2px 2px 4px 4px;
    background-color: #fff;
-   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
+   box-shadow: 0 4px 8px rgba(9, 30, 66, 0.1);
    position: relative;
 }
+
 .brokers__link {
+   color: var(--text-color);
+   text-decoration: none;
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 0 12px;
-   margin-left: 4px;
    height: 48px;
    background-color: #fff;
    border-radius: 4px;
@@ -319,7 +300,31 @@
    top: -24px;
    left: 50%;
    transform: translateX(-50%);
-} */
+}
+
+.brokers__logo {
+   max-width: 180px;
+   height: 50px;
+}
+
+.brokers__item.huobi .brokers__logo {
+   transform: translateY(-6px);
+}
+
+.brokers__item.fbs .brokers__logo {
+   height: 80px;
+   transform: translateY(-8px);
+}
+
+.brokers .section-subtitle {
+   margin: 16px 0 12px;
+}
+
+.brokers__content {
+   color: var(--text-color-lighter);
+   min-height: 80px;
+   padding: 0 12px;
+}
 /* Brokers: end */
 
 /* Choose-us: begin */
@@ -336,7 +341,7 @@
    padding: 32px;
    border-radius: 4px;
    background-color: #fff;
-   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
+   box-shadow: 0 4px 8px rgba(9, 30, 66, 0.1);
 }
 
 .choose-us__description {
@@ -351,7 +356,7 @@
    padding: 32px;
    border-radius: 4px;
    background-color: #fff;
-   box-shadow: 0 8px 16px rgba(9, 30, 66, 0.14), 0 0px 1px rgba(9, 30, 66, 0.08);
+   box-shadow: 0 4px 8px rgba(9, 30, 66, 0.1);
 }
 /* Introduce: end */
 
