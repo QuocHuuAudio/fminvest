@@ -148,7 +148,6 @@ function getParent(element, selector) {
    const brokerItems = Array.from(document.querySelectorAll(".brokers__item"));
 
    brokerItems.forEach((item) => {
-      const windowWidth = window.innerWidth;
       const brokerName = item.className.split(" ").pop();
       const brokerColor = brokerColors[brokerName];
 
