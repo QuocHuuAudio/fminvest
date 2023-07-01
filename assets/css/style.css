@@ -352,7 +352,7 @@
 
 /* Introduce: begin */
 .introduce__item {
-   min-height: 320px;
+   min-height: 426px;
    padding: 32px;
    border-radius: 4px;
    background-color: #fff;
@@ -367,6 +367,7 @@
    padding-top: 80px;
    padding-bottom: 64px;
    background-color: #f3f1ee;
+   background-color: #303030;
 }
 
 .footer__container {
@@ -383,8 +384,8 @@
 }
 
 .footer__title {
-   font-size: 16px;
-   font-weight: 500;
+   color: #fff;
+   font-weight: 600;
    word-spacing: -1px;
    margin: 0;
    display: inline-block;
@@ -400,7 +401,7 @@
 
 .footer__link {
    font-size: 16px;
-   color: var(--text-color-lighter);
+   color: #d3d3d3;
    text-decoration: none;
    word-spacing: -1px;
    display: inline-block;
@@ -409,7 +410,7 @@
 
 .footer__item {
    font-size: 16px;
-   color: var(--text-color-lighter);
+   color: #ccc;
    word-spacing: -1px;
    cursor: default;
 }
@@ -424,7 +425,7 @@
    font-size: 14px;
    font-weight: 300;
    font-style: italic;
-   color: #a3a3a3;
+   color: #8d8c8c;
    word-spacing: -1px;
    text-align: center;
    padding: 0 48px;

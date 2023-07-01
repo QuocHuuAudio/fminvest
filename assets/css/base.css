@@ -202,7 +202,6 @@ p {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 24px;
 }
 
 .section-button {
@@ -213,7 +212,7 @@ p {
    border-radius: 4px;
    padding: 16px 48px;
    display: inline-block;
-   min-width: 120px;
+   width: 100%;
    -webkit-transition: background-color 0.12s ease-in, color 0.12s ease-in;
    transition: background-color 0.12s ease-in, color 0.12s ease-in;
 }
@@ -283,6 +282,10 @@ Breakpoints:
       padding-bottom: 64px;
    }
 
+   .section-subtitle {
+      margin: 8px 0 0;
+   }
+
    .section-title-desc {
       word-spacing: initial;
       letter-spacing: initial;
@@ -291,6 +294,14 @@ Breakpoints:
 
    .section-link {
       margin-top: 32px;
+   }
+
+   .section-nav {
+      padding-top: 48px;
+   }
+
+   .section-sub-description {
+      margin-top: 24px;
    }
 
    .auto-wrap {
@@ -329,7 +340,7 @@ Breakpoints:
 /* low resolution phone */
 @media (max-width: 389px) {
    .section-container {
-      padding-top: 12px;
+      padding-top: 16px;
       padding-bottom: 32px;
    }
 
