@@ -66,7 +66,7 @@ Breakpoints:
       gap: 8px;
    }
 
-   #disclaimer {
+   .footer__section.disclaimer {
       padding: 0px 32px;
    }
 }
@@ -145,7 +145,7 @@ Breakpoints:
       gap: 4px;
    }
 
-   #disclaimer {
+   .footer__section.disclaimer {
       padding: 0 12px;
    }
 }
@@ -382,11 +382,11 @@ Breakpoints:
       font-size: 14px;
    }
 
-   #disclaimer {
+   .footer__section.disclaimer {
       padding: 0;
    }
 
-   #disclaimer > * {
+   .footer__section.disclaimer > * {
       font-size: 12px;
       line-height: 1.42;
    }
@@ -467,7 +467,7 @@ Breakpoints:
       gap: 0;
    }
 
-   #disclaimer > * {
+   .footer__section.disclaimer > * {
       line-height: 1.4;
    }
 }
