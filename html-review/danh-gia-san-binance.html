@@ -21,12 +21,12 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="./assets/css/reset.css">
-   <link rel="stylesheet" href="./assets/css/grid.min.css">
-   <link rel="stylesheet" href="./assets/css/base.css">
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <link rel="stylesheet" href="./assets/css/responsive.css">
-   <link rel="icon" type="image/png" href="./assets/img/logos/favicon_png.png">
+   <link rel="stylesheet" href="../assets/css/reset.css">
+   <link rel="stylesheet" href="../assets/css/grid.min.css">
+   <link rel="stylesheet" href="../assets/css/base.css">
+   <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/responsive.css">
+   <link rel="icon" type="image/png" href="../assets/img/logos/favicon_png.png">
    <title>Binance: Review & đánh giá sàn Binance mới nhất 2023</title>
 </head>
 
@@ -143,14 +143,14 @@
          });
       };
 
-      Promise.all([fetchContent("header.html"), fetchContent("footer.html")])
+      Promise.all([fetchContent("../html-component/header.html"), fetchContent("../html-component/footer.html")])
          .then(([headerContent, footerContent]) => {
             header.innerHTML = headerContent;
             footer.innerHTML = footerContent;
 
             // Nạp tệp header.js sau khi header.html đã được chèn vào
             const scriptElement = document.createElement("script");
-            scriptElement.src = "./assets/js/header.js";
+            scriptElement.src = "../assets/js/header.js";
             document.body.appendChild(scriptElement);
          })
          .catch((error) => {
