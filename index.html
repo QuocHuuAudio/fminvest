@@ -28,110 +28,12 @@
    <link rel="stylesheet" href="./assets/css/base.css">
    <link rel="stylesheet" href="./assets/css/style.css">
    <link rel="stylesheet" href="./assets/css/responsive.css">
-   <link rel="icon" type="image/png" href="./assets/img/logos/favicon_png.png">
+   <link rel="shortcut icon" href="./assets/img/logos/favicon_png.png" type="image/png">
    <title>FM Invest - Thông tin về các sàn giao dịch</title>
 </head>
 
 <body>
-   <header class="header">
-      <section class="container-md header__container">
-         <a href="#" class="header-logo">
-            <img class="header-logo__img" src="./assets/img/logos/fminvest-horizontal-white-png-cropped.png"
-               alt="FM Invest Logo">
-         </a>
-         <a href="#" class="header-logo d-none">
-            <img class="header-logo__img" src="./assets/img/logos/fminvest-horizontal-black-png-cropped.png"
-               alt="FM Invest Logo">
-         </a>
-         <i class="d-md-none header__btn fa-solid fa-bars"></i>
-         <nav class="d-none d-md-block header__nav">
-
-            <img class="nav__logo d-md-none" src="./assets/img/logos/fminvest-horizontal-black-png-cropped.png"
-               alt="FM Invest Logo">
-
-            <i class="fa-solid fa-xmark nav__close-btn d-md-none"></i>
-            <ul class="nav__list">
-               <li class="nav__item">
-                  <span class="nav__title">Tin tức</span>
-                  <i class="nav__icon fa-solid fa-angle-down"></i>
-                  <div class="nav__dropdown">
-                     <div class="nav__box">
-                        <div class="nav__box-title">
-                           <span style="color: #555; font-weight: 500;">Hệ thống đang nâng cấp...</span>
-                           <br>
-                           <br>
-                           <span style="font-style: italic; color: #777;">Chúng tôi xin lỗi về sự bất tiện này</span>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-
-               <li class="nav__item">
-                  <span class="nav__title">Kiến thức</span>
-                  <i class="nav__icon fa-solid fa-angle-down"></i>
-                  <div class="nav__dropdown">
-                     <div class="nav__box">
-                        <div class="nav__box-title">
-                           <span style="color: #555; font-weight: 500;">Hệ thống đang nâng cấp...</span>
-                           <br>
-                           <br>
-                           <span style="font-style: italic; color: #777;">Chúng tôi xin lỗi về sự bất tiện này</span>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-
-               <li class="nav__item">
-                  <span class="nav__title">Top Broker</span>
-                  <i class="nav__icon fa-solid fa-angle-down"></i>
-                  <div class="nav__dropdown">
-                     <div class="nav__box">
-                        <div class="nav__box-title">
-                           <i class="nav__box-icon fa-solid fa-sack-dollar"></i>
-                           <h3 class="nav__box-name">Forex Brokers</h3>
-                        </div>
-                        <ul>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">Exness</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">XM</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">FBS</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">So sánh</a>
-                           </li>
-                        </ul>
-                     </div>
-
-                     <div class="nav__box">
-                        <div class="nav__box-title">
-                           <i class="nav__box-icon fa-brands fa-bitcoin"></i>
-                           <h3 class="nav__box-name">Crypto Brokers</h3>
-                        </div>
-                        <ul>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="./danh-gia-san-binance.html">Binance</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">KuCoin</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">Huobi</a>
-                           </li>
-                           <li class="nav__box-item">
-                              <a class="nav__box-link" href="">So sánh</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-            </ul>
-         </nav>
-      </section>
-   </header>
+   <header id="header"></header>
 
    <main>
       <section id="banner" class="banner section-container">
@@ -178,7 +80,7 @@
             <ul class="brokers__list row gx-xl-5">
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item binance">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-binance.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/binance_logo.svg" alt="Sàn Binance">
                      </a>
                      <h3 class="section-subtitle">Sàn Binance</h3>
@@ -187,7 +89,7 @@
                         mật
                         tốt.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-binance.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn Binance</span>
                      </a>
@@ -195,14 +97,14 @@
                </li>
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item kucoin">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-kucoin.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/kucoin_logo.svg" alt="Sàn KuCoin">
                      </a>
                      <h3 class="section-subtitle">Sàn KuCoin</h3>
                      <p class="brokers__content">
                         Giao diện người dùng dễ sử dụng, chính sách phí hợp lý, hệ sinh thái DeFi đa dạng.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-kucoin.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn KuCoin</span>
                      </a>
@@ -210,14 +112,14 @@
                </li>
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item huobi">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-huobi.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/huobi_logo.svg" alt="Sàn Huobi">
                      </a>
                      <h3 class="section-subtitle">Sàn Huobi</h3>
                      <p class="brokers__content">
                         Đội ngũ phát triển hàng đầu, sàn giao dịch toàn cầu, công nghệ và an ninh tiên tiến.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-huobi.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn Huobi</span>
                      </a>
@@ -225,14 +127,14 @@
                </li>
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item exness">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-exness.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/exness_logo.svg" alt="Sàn Exness">
                      </a>
                      <h3 class="section-subtitle">Sàn Exness</h3>
                      <p class="brokers__content">
                         Thành tựu vượt trội về thanh khoản, công nghệ giao dịch tiên tiến, nạp rút nhanh.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-exness.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn Exness</span>
                      </a>
@@ -240,7 +142,7 @@
                </li>
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item xm">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-xm.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/xm_logo.svg" alt="Sàn XM">
                      </a>
                      <h3 class="section-subtitle">Sàn XM</h3>
@@ -248,7 +150,7 @@
                         Đa dạng sản phẩm và dịch vụ, có đào tạo và giáo dục cho khách hàng, công nghệ và tính năng giao
                         dịch tiên tiến.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-xm.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn XM</span>
                      </a>
@@ -256,14 +158,14 @@
                </li>
                <li class="brokers__box col-md-6 col-lg-4">
                   <div class="brokers__item fbs">
-                     <a href="#" class="brokers__link">
+                     <a href="./html-review/danh-gia-san-fbs.html" class="brokers__link">
                         <img class="brokers__logo" src="./assets/img/logos/fbs_logo.svg" alt="Sàn FBS">
                      </a>
                      <h3 class="section-subtitle">Sàn FBS</h3>
                      <p class="brokers__content">
                         Sự hiện diện toàn cầu, chính sách giao dịch linh hoạt, hỗ trợ khách hàng 24/7.
                      </p>
-                     <a class="section-link d-inline-block" href="#">
+                     <a class="section-link d-inline-block" href="./html-review/danh-gia-san-fbs.html">
                         <i class="section-link__icon fa-solid fa-arrow-right"></i>
                         <span>Chi tiết sàn FBS</span>
                      </a>
@@ -384,72 +286,36 @@
 
    </main>
 
-   <footer id="footer" class="footer">
-      <div class="container-md">
-         <div class="footer__container">
-            <section class="footer__section">
-               <a href="#">
-                  <img class="footer__logo" src="./assets/img/logos/fminvest-horizontal-white-png-cropped.png"
-                     alt="FM Invest Logo">
-               </a>
-               <ul class="footer__list">
-                  <li><a href="#" class="footer__link">Trang chủ</a></li>
-                  <li><a href="/top-3-san-giao-dich-forex" class="footer__link">Top 3 sàn giao dịch Forex</a></li>
-                  <li><a href="/top-3-san-giao-dich-crypto" class="footer__link">Top 3 sàn giao dịch Crypto</a></li>
-               </ul>
-            </section>
-            <section class="footer__section">
-               <h4 class="footer__title">Kiến thức</h4>
-               <ul class="footer__list">
-                  <li><a href="/kien-thuc-forex" class="footer__link">Kiến thức Forex</a></li>
-                  <li><a href="/kien-thuc-crypto" class="footer__link">Kiến thức Crypto</a></li>
-               </ul>
-            </section>
-            <section class="footer__section">
-               <h4 class="footer__title">Sàn giao dịch Forex</h4>
-               <ul class="footer__list">
-                  <li><a href="/exness" class="footer__link">Exness</a></li>
-                  <li><a href="/xm" class="footer__link">XM</a></li>
-                  <li><a href="/fbs" class="footer__link">FBS</a></li>
-               </ul>
-            </section>
-            <section class="footer__section">
-               <h4 class="footer__title">Sàn giao dịch Crypto</h4>
-               <ul class="footer__list">
-                  <li><a href="/binance" class="footer__link">Binance</a></li>
-                  <li><a href="/kucoin" class="footer__link">KuCoin</a></li>
-                  <li><a href="/huobi" class="footer__link">Huobi</a></li>
-               </ul>
-            </section>
-            <section class="footer__section footer__contact">
-               <span class="footer__title">Liên hệ</span>
-               <ul class="footer__list">
-                  <li class="footer__item">
-                     Email:
-                     <a class="footer__link" href="">fminvest@gmail.com</a>
-                  </li>
-                  <li class="footer__item">
-                     Phone:
-                     <a class="footer__link" href="">+84934950123</a>
-                  </li>
-                  <li class="footer__item">
-                     Telegram:
-                     <a class="footer__link" href="">@fminvest</a>
-                  </li>
-               </ul>
-            </section>
-            <section class="footer__section disclaimer">
-               <p>Tuyên bố miễn trừ trách nhiệm: Mọi thông tin trên trang web này chỉ mang tính chất tham khảo và
-                  không đại diện cho lời khuyên đầu tư, mua/bán hay bất kỳ hành động tài chính nào. Mọi quyết định
-                  đầu tư hoặc giao dịch đều được thực hiện dựa trên quyền riêng của người dùng. Người sử dụng
-                  phải tự chịu trách nhiệm và nắm rõ rủi ro liên quan đến việc sử dụng và đầu tư vốn của mình.</p>
-            </section>
-         </div>
-      </div>
-   </footer>
+   <footer id="footer"></footer>
 
    <script src="./assets/js/home.js"></script>
-   <script src="./assets/js/header.js"></script>
+   <script>
+      const header = document.getElementById("header");
+      const footer = document.getElementById("footer");
+
+      const fetchContent = (url) => {
+         return fetch(url).then((response) => {
+            if (!response.ok) {
+               throw new Error(`Error loading ${url}: ${response.status} ${response.statusText}`);
+            }
+            return response.text();
+         });
+      };
+
+      Promise.all([fetchContent("./html-component/header.html"), fetchContent("./html-component/footer.html")])
+         .then(([headerContent, footerContent]) => {
+            header.innerHTML = headerContent;
+            footer.innerHTML = footerContent;
+
+            // Nạp tệp header.js sau khi header.html đã được chèn vào
+            const scriptElement = document.createElement("script");
+            scriptElement.src = "./assets/js/header.js";
+            document.body.appendChild(scriptElement);
+         })
+         .catch((error) => {
+            console.error("Error loading content:", error);
+         });
+   </script>
 </body>
 
 </html>
