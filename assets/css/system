@@ -21,10 +21,8 @@ https://www.finhay.com.vn/san-binance#nguoi-sang-lap-san-binance-la-ai
 https://www.wix.com/blog/how-to-make-a-website
 https://www.smashingmagazine.com/2023/06/ai-detect-sentiment-audio-files/
 
-.brokers__list {
-   row-gap: 96px;
-   sửa row-gap ở màn nhỏ
-}
+Nội dung mẫu cho Binance
+
 
 1. Xử lý các item trong navDropdown mở ra từ từ khi click vào
 
