@@ -12,18 +12,17 @@ const fetchContent = (url) => {
    });
 };
 
-const baseHref = location.href.split("/").slice(0, -1).join("/");
-const headerPath = `${baseHref}/html-component/header.html`;
-const footerPath = `${baseHref}/html-component/footer.html`;
-
-Promise.all([fetchContent(headerPath), fetchContent(footerPath)])
+Promise.all([
+   fetchContent("FM_Invest/html-component/header.html"),
+   fetchContent("FM_Invest/html-component/footer.html"),
+])
    .then(([headerContent, footerContent]) => {
       header.innerHTML = headerContent;
       footer.innerHTML = footerContent;
 
       // Nạp tệp header.js sau khi header.html đã được chèn vào
       const scriptElement = document.createElement("script");
-      scriptElement.src = ".../assets/js/header.js";
+      scriptElement.src = "FM_Invest/assets/js/header.js";
       document.body.appendChild(scriptElement);
    })
    .catch((error) => {
