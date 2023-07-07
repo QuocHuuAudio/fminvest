@@ -13,8 +13,8 @@ const fetchContent = (url) => {
 };
 
 Promise.all([
-   fetchContent("FM_Invest/html-component/header.html"),
-   fetchContent("FM_Invest/html-component/footer.html"),
+   fetchContent("/html-component/header.html"),
+   fetchContent("/html-component/footer.html"),
 ])
    .then(([headerContent, footerContent]) => {
       header.innerHTML = headerContent;
@@ -22,7 +22,7 @@ Promise.all([
 
       // Nạp tệp header.js sau khi header.html đã được chèn vào
       const scriptElement = document.createElement("script");
-      scriptElement.src = "FM_Invest/assets/js/header.js";
+      scriptElement.src = "/assets/js/header.js";
       document.body.appendChild(scriptElement);
    })
    .catch((error) => {
