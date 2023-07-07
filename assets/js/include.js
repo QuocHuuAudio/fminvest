@@ -13,8 +13,8 @@ const fetchContent = (url) => {
 };
 
 Promise.all([
-   fetchContent("/html-component/header.html"),
-   fetchContent("/html-component/footer.html"),
+   fetchContent(".../html-component/header.html"),
+   fetchContent(".../html-component/footer.html"),
 ])
    .then(([headerContent, footerContent]) => {
       header.innerHTML = headerContent;
