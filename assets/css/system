@@ -29,6 +29,20 @@ https://dolazo.net/review/san-binance/
 
 1. Xử lý các item trong navDropdown mở ra từ từ khi click vào
 
-
+Thư mục của tôi có cấu trúc như sau:
+- FM_Invest
+   - assets
+      - css
+      - img
+      - js
+         - home.js
+         - header.js
+         - include.js
+   - html-component
+      - header.html
+      - footer.html
+   - exchange-review
+      danh-gia-san-binance.html
+   - index.html
 
 */ -->
